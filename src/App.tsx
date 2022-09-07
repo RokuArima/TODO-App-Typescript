@@ -27,7 +27,8 @@ function App() {
   setAddTask(e.target.value);
 
   const onClickAdd = () => {
-    alert("test");
+    setIncompleteTask([...incompleteTask, addTask]);
+    setAddTask("");
   };
   
   const onClickComplete = () => {
