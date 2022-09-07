@@ -27,6 +27,7 @@ function App() {
   setAddTask(e.target.value);
 
   const onClickAdd = () => {
+    if (addTask === "") return;
     setIncompleteTask([...incompleteTask, addTask]);
     setAddTask("");
   };
