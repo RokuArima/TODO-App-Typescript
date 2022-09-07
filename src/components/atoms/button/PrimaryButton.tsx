@@ -3,10 +3,11 @@ import { FC, ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  onClick: () => void;
+  onClick: (index:number) => void;
+  index: number;
 };
 
 export const PrimaryButton: FC<Props> = (props) => {
-  const { children, onClick } = props;
-  return <Button variant="contained" onClick={onClick}>{children}</Button>;
+  const { children, onClick, index } = props;
+  return <Button variant="contained" onClick={() => onClick(index)}>{children}</Button>;
 };
